@@ -43,7 +43,7 @@ Partial Class frmMain
         'tvTreeView
         '
         Me.tvTreeView.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.tvTreeView.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tvTreeView.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tvTreeView.ImageIndex = 0
         Me.tvTreeView.ImageList = Me.imgTVList
         Me.tvTreeView.Location = New System.Drawing.Point(0, 125)
@@ -189,6 +189,7 @@ Partial Class frmMain
         Me.imgTVList.Images.SetKeyName(130, "zoom_in.png")
         Me.imgTVList.Images.SetKeyName(131, "zoom_out.png")
         Me.imgTVList.Images.SetKeyName(132, "lims.png")
+        Me.imgTVList.Images.SetKeyName(133, "pharmacey.png")
         '
         'lvListView
         '
@@ -337,6 +338,7 @@ Partial Class frmMain
         Me.imgTVListB.Images.SetKeyName(129, "zoom_in.png")
         Me.imgTVListB.Images.SetKeyName(130, "zoom_out.png")
         Me.imgTVListB.Images.SetKeyName(131, "lims.png")
+        Me.imgTVListB.Images.SetKeyName(132, "pharmacey.png")
         '
         'lblMenu
         '
@@ -370,9 +372,9 @@ Partial Class frmMain
         Me.lblCompany.ForeColor = System.Drawing.Color.White
         Me.lblCompany.Location = New System.Drawing.Point(231, 51)
         Me.lblCompany.Name = "lblCompany"
-        Me.lblCompany.Size = New System.Drawing.Size(451, 26)
+        Me.lblCompany.Size = New System.Drawing.Size(451, 35)
         Me.lblCompany.TabIndex = 15
-        Me.lblCompany.Text = "Organisation Name"
+        Me.lblCompany.Text = "Demo Organisation"
         '
         'lblTitle
         '
@@ -384,7 +386,7 @@ Partial Class frmMain
         Me.lblTitle.Name = "lblTitle"
         Me.lblTitle.Size = New System.Drawing.Size(451, 28)
         Me.lblTitle.TabIndex = 14
-        Me.lblTitle.Text = "medERP :: Medical ERP System."
+        Me.lblTitle.Text = "medERP - mySoft Solutions"
         '
         'picListView
         '
@@ -411,7 +413,7 @@ Partial Class frmMain
         '
         Me.picLogo.BackColor = System.Drawing.Color.White
         Me.picLogo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.picLogo.Image = Global.medERP.My.Resources.Resources.ERP_Logo
+        Me.picLogo.Image = Global.medERP.My.Resources.Resources.ERP_Logo1
         Me.picLogo.Location = New System.Drawing.Point(0, 0)
         Me.picLogo.Name = "picLogo"
         Me.picLogo.Size = New System.Drawing.Size(217, 119)
@@ -423,7 +425,7 @@ Partial Class frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(876, 482)
         Me.Controls.Add(Me.tvTreeView)
         Me.Controls.Add(Me.lvListView)
         Me.Controls.Add(Me.lblMenu)
@@ -433,10 +435,9 @@ Partial Class frmMain
         Me.Controls.Add(Me.picListView)
         Me.Controls.Add(Me.picTitles)
         Me.Controls.Add(Me.picLogo)
-        Me.KeyPreview = True
         Me.Name = "frmMain"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "medERP"
+        Me.Text = "medERP :: mySoft Solutions"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.picListView, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.picTitles, System.ComponentModel.ISupportInitialize).EndInit()

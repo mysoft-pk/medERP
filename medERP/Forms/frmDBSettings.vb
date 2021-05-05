@@ -19,6 +19,11 @@ Public Class frmDBSettings
             txtUsername.Text = builder.UserID.ToString
             txtPassword.Text = builder.Password.ToString
             txtAdminPassword.Text = ""
+        Else
+            txtDatabase.Text = ""
+            txtUsername.Text = ""
+            txtPassword.Text = ""
+            txtAdminPassword.Text = ""
         End If
     End Sub
 
@@ -29,6 +34,11 @@ Public Class frmDBSettings
     End Sub
 
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
+        If txtAdminPassword.Text <> "M@nidagr8" Then
+            MsgBox("Please Provide correct Administrator Password.", vbCritical, "medERP")
+            txtAdminPassword.Focus()
+            Exit Sub
+        End If
         Dim connectionString As String = String.Format("Data Source={0};Initial Catalog={1};User ID={2};Password={3};", cboServer.Text, txtDatabase.Text, txtUsername.Text, txtPassword.Text)
 
         Try

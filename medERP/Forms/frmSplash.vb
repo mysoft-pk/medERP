@@ -4,6 +4,7 @@ Public NotInheritable Class frmSplash
 
     Private Sub frmSplash_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         Timer1.Start()
+        Version.Text = System.String.Format(Version.Text, My.Application.Info.Version.Major, My.Application.Info.Version.Minor, My.Application.Info.Version.Build, My.Application.Info.Version.Revision)
     End Sub
 
     Private Sub MainLayoutPanel_Paint(ByVal sender As System.Object, ByVal e As System.Windows.Forms.PaintEventArgs)
@@ -16,7 +17,7 @@ Public NotInheritable Class frmSplash
         If CheckConnectionString() = False Then
             frmDBSettings.ShowDialog()
         End If
-        frmMain.Show()
+        frmLogin.Show()
     End Sub
 
     Private Function CheckConnectionString() As Boolean

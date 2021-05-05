@@ -1,51 +1,23 @@
-﻿Imports System.Windows.Forms
-Public Class frmMain
-    Public xCompanyName As String
-    Public xCompanyAddress As String
-    Public xCompanyPhone As String
-    Public xCompanyWebsite As String
-
-    Public xEmailAddress As String
-    Public xEmailPassword As String
-    Public xBranchID As String
-    Public xIsHO As Boolean
-    Public xIsAdmin As Boolean
-    Public xProcessState As Boolean
-    Public dtMenus As DataTable
-    Private Sub frmMain_Disposed(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Disposed
-        frmSplash.Dispose()
-        Me.Dispose(True)
-    End Sub
-
-    Private Sub frmMain_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        'Try
-
-        'Dim blsec As New Security, uinfo As New Security.UserInfo
-        '    blsec.Init()
-        '    uinfo = blsec.LoginApplication()
-        '    If uinfo.UserId = "" Then
-        '        End
-        '    End If
-        '    lblCompany.Text = xCompanyName
-        '    lblUser.Text = "Logged on User : " & uinfo.UserName & "(" & Format(uinfo.sessiondate, "dd/MM/yyyy hh:mm:ss tt") & ")"
-        '    If blsec.AppVersion() <> My.Application.Info.Version.ToString Then
-        '        MsgBox("Software version is out of date." & vbCrLf & "Please contact system administrator for installation.", MsgBoxStyle.Critical)
-        '        End
-        '    End If
-        '    blsec.Close()
-        '    GetUserMenu()
-        '    tvTreeView.Nodes.RemoveByKey("Main")
-        '    PopulateTreeView("0", Nothing)
-        '    tvTreeView.ExpandAll()
-        'Catch ex As Exception
-        '    MsgBox(ex.Message, MsgBoxStyle.Critical)
-        'End Try
-    End Sub
-    Private Sub GetUserMenu()
-        'Dim conn As New clsDatabase
-        'conn.ConnectionString = My.Application.CnString
-        'conn.OpenConnection()
-        'dtMenus = conn.GetDatabysql("Select * From Menu Where Type <> 'List' Order By SortID")
+﻿Public Class frmMain
+    Dim dtMenus As DataTable
+    Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Try
+            GetCompanyInformation()
+            'GetCCInformation()
+            lblCompany.Text = My.Application.CompanyName
+            lblUser.Text = "Logged on User : " & My.Application.UserName & "(" & Format(My.Application.SDate, "dd/MM/yyyy hh:mm:ss tt") & ")"
+            'If blsec.AppVersion() <> My.Application.Info.Version.ToString Then
+            '    MsgBox("Software version is out of date." & vbCrLf & "Please contact system administrator for installation.", MsgBoxStyle.Critical)
+            '    End
+            'End If
+            Dim xUser As New User
+            dtMenus = xUser.GetUserMenu()
+            tvTreeView.Nodes.RemoveByKey("Main")
+            PopulateTreeView("0", Nothing)
+            tvTreeView.ExpandAll()
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Critical)
+        End Try
     End Sub
     Private Sub PopulateTreeView(ByVal parentId As String, ByVal parentNode As TreeNode)
 
@@ -53,7 +25,7 @@ Public Class frmMain
 
         For Each dr As DataRow In dtMenus.[Select]("[parent]='" & parentId & "'")
             Dim t As TreeNode = New TreeNode()
-            t.Text = IIf(dr("MenuDesc").ToString() = "Main", xCompanyName, dr("MenuDesc").ToString())
+            t.Text = IIf(dr("MenuDesc").ToString() = "Main", My.Application.CompanyName, dr("MenuDesc").ToString())
             t.Name = dr("MenuID").ToString()
             t.Tag = dtMenus.Rows.IndexOf(dr)
             t.ImageKey = dr("Icon").ToString()
@@ -70,7 +42,31 @@ Public Class frmMain
             PopulateTreeView(dr("MenuID").ToString(), childNode)
         Next
     End Sub
-    Private Sub frmMain_Resize(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Resize
+    Private Sub frmMain_Disposed(sender As Object, e As EventArgs) Handles Me.Disposed
+        frmSplash.Dispose()
+        frmLogin.Dispose()
+        Me.Dispose(True)
+    End Sub
+
+    Private Sub GetCompanyInformation()
+        Dim xCompany As New Company
+        Dim dtCompany As DataTable
+
+        dtCompany = xCompany.GetCompany()
+
+        If dtCompany.Rows.Count > 0 Then
+            My.Application.CompanyName = dtCompany.Rows(0)("CompanyName")
+            My.Application.CompanyAddress = dtCompany.Rows(0)("CompanyAddress")
+            My.Application.CompanyPhone = dtCompany.Rows(0)("CompanyPhone")
+        Else
+            My.Application.CompanyName = "N/A"
+            My.Application.CompanyAddress = "N/A"
+            My.Application.CompanyPhone = "N/A"
+            MsgBox("Please Configure Company Details.", vbInformation, "medERP")
+        End If
+    End Sub
+
+    Private Sub frmMain_Resize(sender As Object, e As EventArgs) Handles Me.Resize
         'Set Tile Bar Width Same as FrmMain
         picTitles.Width = Me.Width - picLogo.Width - 25
 
@@ -100,26 +96,23 @@ Public Class frmMain
     End Sub
 
     Private Sub FillList(ByVal ParentID As String)
-        'Dim Conn As New clsDatabase
-        'Dim strKey As String
-        'Dim strDesc As String
-        'Dim dtListObjects As DataTable = New DataTable()
-        'lvListView.Items.Clear()
+        Dim strKey As String
+        Dim strDesc As String
+        Dim dtListObjects As DataTable = New DataTable()
+        lvListView.Items.Clear()
 
-        ''Conn.ConnectionString = My.Application.CnString
-        'Conn.OpenConnection()
+        Dim xUser As New User
+        dtListObjects = xUser.GetFillList(My.Application.Userid, ParentID)
 
-        ''dtListObjects = Conn.GetDatabysql("Select Menu.* From Menu inner join userauth on userauth.listid = menu.menuid Where menu.Type = 'List' and userauth.userid = '" & My.Application.Userid & "' and userauth.rights=1 and menu.Parent = '" + ParentID + "' Order By SortID")
-
-        'For Each dr As DataRow In dtListObjects.[Select]("[parent]='" & ParentID & "'")
-        '    strKey = dr("MenuID").ToString()
-        '    strDesc = dr("MenuDesc").ToString()
-        '    Dim lv As ListViewItem = New ListViewItem(strDesc, 0)
-        '    lv.Name = strKey
-        '    lv.SubItems.Add(strKey)
-        '    lv.ImageKey = dr("Icon").ToString()
-        '    lvListView.Items.Add(lv)
-        'Next
+        For Each dr As DataRow In dtListObjects.[Select]("[parent]='" & ParentID & "'")
+            strKey = dr("MenuID").ToString()
+            strDesc = dr("MenuDesc").ToString()
+            Dim lv As ListViewItem = New ListViewItem(strDesc, 0)
+            lv.Name = strKey
+            lv.SubItems.Add(strKey)
+            lv.ImageKey = dr("Icon").ToString()
+            lvListView.Items.Add(lv)
+        Next
     End Sub
 
     Private Sub lvListView_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles lvListView.DoubleClick
@@ -196,9 +189,5 @@ Public Class frmMain
         Return System.Reflection.Assembly.GetExecutingAssembly().CreateInstance(ProductName & "." & strFormName)
     End Function
 
-    Private Sub frmMain_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
-        If e.KeyCode = Keys.D And e.Modifiers = Keys.Control Then
-            frmDBSettings.Show(Me)
-        End If
-    End Sub
+
 End Class

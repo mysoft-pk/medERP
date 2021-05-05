@@ -117,38 +117,35 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="calendar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\icons16\calendar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="cmdNewLoc.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAfdEVYdFNvZnR3YXJlAE1hY3JvbWVkaWEgRmlyZXdvcmtz
+        IDi1aNJ4AAABvUlEQVRIS7WVTUsCURSG3QdRW6Hf0e9o06qiMMpxMoskXLRp4T8oWmStgjb2oWZpWUbL
+        rCAqdBwdpY3aB1E0bk/nWAPNvXJ1LrV4GO7hPeflvHN1XADwr3CF2YOSGxnpgl62tx1cARsVBDqhxvXs
+        8PZ9P9vPwhWwWWWHsfjiOqxeNiCYMjID4YsedsZvuAIO6LjB9H4Rjg0TovkPOmcHV3J97BwLroANLQM/
+        Mp8sQ/DI4PDFdEiVTdDeAE3eqZYd2rptGxdXsAw8uxpsXtdBe2lyRHI1iNy8wmm12WIN48J3ksE+bhPb
+        gbAMAgg2wRTGwULvQIkVW1F58akmdCs+lZ1nOxCWgT9RgoXDMoTShhDSkPbHQGHn2Q6EZWBFVHhuCiEN
+        aR0bBJIlUDAKz54mhDSkdWxAa9ONWTqpCCGNdEQbuH7+yRRCGumIvHjfJ3Y0IaSRimgGr95iyoDls6oQ
+        0pDWsQGtHbmqwUPDFEIaqYjmcG36IY1FC0JIQ1rHBrR2KF2B8PmjENJIRTSJa6/j+nf1TyGkIa1jg+9b
+        VIRxvCkiSOP0FnX84Ajo/s9Okq42oI/+qCRudp7t8PeA6wvi6a3efgX/zwAAAABJRU5ErkJggg==
+</value>
   </data>
-  <data name="ERP_Logo - Copy" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\ERP_Logo - Copy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ERP_Logo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\ERP_Logo1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="document24" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\FormIcons\document24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="user" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\icons16\user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="more" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\icons16\more.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="binoculars" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\icons16\binoculars.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="listview pic" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\listview pic.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="binoculars24" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\FormIcons\binoculars24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ERP_Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\ERP_Logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="file" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\icons16\file.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="btnFindLoc.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAfdEVYdFNvZnR3YXJlAE1hY3JvbWVkaWEgRmlyZXdvcmtz
+        IDi1aNJ4AAACF0lEQVRIS82U20uTYRzHvfY/6J/oopvuxPsCsSvv1IqldLhVMVGToLqJoCC8SwQH85An
+        EDO1g+lsHZQ15zuDzYmuJsXSSLL18/nInpd37/sYA1+hiy/89j2Od4cyETlRGEk/YST9hJH0E0YS3Bhb
+        a1LoLCBg0AMOvcmtaxhJcHEgXndpMN5QwAW3Dqd1vG5dw0M0DFs1LZPJbNdsOt45sx67NZOOtU2lrGuj
+        ifvqnZ4G3HBoePCSIevuK3px9uHiqY7p9czr9J58+JqXSGZflrJ5mfj8U648tUSVH4IbDg0PXjJk6XB2
+        Fg1cHUncDUa/y0cVnN/8LQsK7778kfHErmcADg0PXjJk6XB22kflg7ny9unUNoFwobzUAWeGDro8A5eH
+        Vqu7I9l8ZGvfDoFSBwBZOujyDDQOWzdDsZwsHmOALB10eQbUs+vjgzMNjFo7Ehiykqr8BeCGMw3QQZdp
+        IHjUwEA8J7WhWLP2csP9YyCovSUNDKqyuv6VLu3lhvvvBkLPk78OfzRv1Y9HY3n7r4xYP6S2f+W29nLD
+        oTm9ZOmgS3vtgetja92tz1Jy79WGPApv2bjzckPU3wAh+zPghkNzesnSQZf22gNAfX+bn7zP7M2lcgLe
+        KDwOb35Tj6Te6QNwaHi0nywdTl9RCFT1RivO90QbwbmeaKCq99MZt0cDDY/2k3V7il6cBIyknzCSfsJI
+        +gcpOwBGROabw9QHzgAAAABJRU5ErkJggg==
+</value>
   </data>
 </root>

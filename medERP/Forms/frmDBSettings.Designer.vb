@@ -41,7 +41,7 @@ Partial Class frmDBSettings
         Me.btnSave.Location = New System.Drawing.Point(269, 165)
         Me.btnSave.Name = "btnSave"
         Me.btnSave.Size = New System.Drawing.Size(81, 22)
-        Me.btnSave.TabIndex = 16
+        Me.btnSave.TabIndex = 6
         Me.btnSave.Text = "&Save"
         Me.btnSave.UseVisualStyleBackColor = True
         '
@@ -62,14 +62,14 @@ Partial Class frmDBSettings
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtPassword.Size = New System.Drawing.Size(247, 22)
-        Me.txtPassword.TabIndex = 14
+        Me.txtPassword.TabIndex = 3
         '
         'btnConnect
         '
         Me.btnConnect.Location = New System.Drawing.Point(103, 165)
         Me.btnConnect.Name = "btnConnect"
         Me.btnConnect.Size = New System.Drawing.Size(81, 22)
-        Me.btnConnect.TabIndex = 17
+        Me.btnConnect.TabIndex = 5
         Me.btnConnect.Text = "&Connect"
         Me.btnConnect.UseVisualStyleBackColor = True
         '
@@ -89,7 +89,7 @@ Partial Class frmDBSettings
         Me.txtDatabase.Location = New System.Drawing.Point(103, 42)
         Me.txtDatabase.Name = "txtDatabase"
         Me.txtDatabase.Size = New System.Drawing.Size(247, 22)
-        Me.txtDatabase.TabIndex = 13
+        Me.txtDatabase.TabIndex = 1
         '
         'cboServer
         '
@@ -98,7 +98,7 @@ Partial Class frmDBSettings
         Me.cboServer.Location = New System.Drawing.Point(103, 12)
         Me.cboServer.Name = "cboServer"
         Me.cboServer.Size = New System.Drawing.Size(247, 24)
-        Me.cboServer.TabIndex = 19
+        Me.cboServer.TabIndex = 0
         '
         'Label2
         '
@@ -126,7 +126,7 @@ Partial Class frmDBSettings
         Me.txtUsername.Location = New System.Drawing.Point(103, 70)
         Me.txtUsername.Name = "txtUsername"
         Me.txtUsername.Size = New System.Drawing.Size(247, 22)
-        Me.txtUsername.TabIndex = 21
+        Me.txtUsername.TabIndex = 2
         '
         'Label4
         '
@@ -145,7 +145,7 @@ Partial Class frmDBSettings
         Me.txtAdminPassword.Name = "txtAdminPassword"
         Me.txtAdminPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtAdminPassword.Size = New System.Drawing.Size(247, 22)
-        Me.txtAdminPassword.TabIndex = 23
+        Me.txtAdminPassword.TabIndex = 4
         '
         'frmDBSettings
         '
