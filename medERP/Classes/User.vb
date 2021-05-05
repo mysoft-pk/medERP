@@ -270,7 +270,7 @@ Class User
                 com.Parameters.AddWithValue("@ListID", xObjectID)
                 com.Parameters.AddWithValue("@Rights", xRights)
                 com.Parameters.AddWithValue("@AuditUser", My.Application.Userid)
-                com.Parameters.AddWithValue("@ComputerName", Environment.MachineName)
+                com.Parameters.AddWithValue("@AuditComputer", Environment.MachineName)
 
                 rows = com.ExecuteNonQuery()
             End Using

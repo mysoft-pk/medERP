@@ -26,11 +26,11 @@ Partial Class frmBranch
         Me.Label7 = New System.Windows.Forms.Label()
         Me.txtPHCRegNo = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.txtCmpPhone = New System.Windows.Forms.TextBox()
+        Me.txtBranchPhone = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.txtCmpAddress = New System.Windows.Forms.TextBox()
+        Me.txtBranchAddress = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.txtCmpName = New System.Windows.Forms.TextBox()
+        Me.txtBranchName = New System.Windows.Forms.TextBox()
         Me.btnAdd = New System.Windows.Forms.Button()
         Me.btnClose = New System.Windows.Forms.Button()
         Me.chkInactive = New System.Windows.Forms.CheckBox()
@@ -70,14 +70,14 @@ Partial Class frmBranch
         Me.Label3.TabIndex = 9227
         Me.Label3.Text = "Phone No."
         '
-        'txtCmpPhone
+        'txtBranchPhone
         '
-        Me.txtCmpPhone.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCmpPhone.Location = New System.Drawing.Point(119, 90)
-        Me.txtCmpPhone.MaxLength = 250
-        Me.txtCmpPhone.Name = "txtCmpPhone"
-        Me.txtCmpPhone.Size = New System.Drawing.Size(197, 22)
-        Me.txtCmpPhone.TabIndex = 3
+        Me.txtBranchPhone.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtBranchPhone.Location = New System.Drawing.Point(119, 90)
+        Me.txtBranchPhone.MaxLength = 250
+        Me.txtBranchPhone.Name = "txtBranchPhone"
+        Me.txtBranchPhone.Size = New System.Drawing.Size(197, 22)
+        Me.txtBranchPhone.TabIndex = 3
         '
         'Label2
         '
@@ -89,14 +89,14 @@ Partial Class frmBranch
         Me.Label2.TabIndex = 9226
         Me.Label2.Text = "Address"
         '
-        'txtCmpAddress
+        'txtBranchAddress
         '
-        Me.txtCmpAddress.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCmpAddress.Location = New System.Drawing.Point(119, 64)
-        Me.txtCmpAddress.MaxLength = 250
-        Me.txtCmpAddress.Name = "txtCmpAddress"
-        Me.txtCmpAddress.Size = New System.Drawing.Size(197, 22)
-        Me.txtCmpAddress.TabIndex = 2
+        Me.txtBranchAddress.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtBranchAddress.Location = New System.Drawing.Point(119, 64)
+        Me.txtBranchAddress.MaxLength = 250
+        Me.txtBranchAddress.Name = "txtBranchAddress"
+        Me.txtBranchAddress.Size = New System.Drawing.Size(197, 22)
+        Me.txtBranchAddress.TabIndex = 2
         '
         'Label1
         '
@@ -108,14 +108,14 @@ Partial Class frmBranch
         Me.Label1.TabIndex = 9225
         Me.Label1.Text = "Branch Name"
         '
-        'txtCmpName
+        'txtBranchName
         '
-        Me.txtCmpName.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCmpName.Location = New System.Drawing.Point(119, 38)
-        Me.txtCmpName.MaxLength = 250
-        Me.txtCmpName.Name = "txtCmpName"
-        Me.txtCmpName.Size = New System.Drawing.Size(197, 22)
-        Me.txtCmpName.TabIndex = 1
+        Me.txtBranchName.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtBranchName.Location = New System.Drawing.Point(119, 38)
+        Me.txtBranchName.MaxLength = 250
+        Me.txtBranchName.Name = "txtBranchName"
+        Me.txtBranchName.Size = New System.Drawing.Size(197, 22)
+        Me.txtBranchName.TabIndex = 1
         '
         'btnAdd
         '
@@ -182,11 +182,12 @@ Partial Class frmBranch
         '
         'txtBranchID
         '
-        Me.txtBranchID.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.txtBranchID.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.txtBranchID.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtBranchID.Location = New System.Drawing.Point(119, 10)
         Me.txtBranchID.MaxLength = 50
         Me.txtBranchID.Name = "txtBranchID"
+        Me.txtBranchID.ReadOnly = True
         Me.txtBranchID.Size = New System.Drawing.Size(139, 22)
         Me.txtBranchID.TabIndex = 0
         '
@@ -217,11 +218,11 @@ Partial Class frmBranch
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.txtPHCRegNo)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.txtCmpPhone)
+        Me.Controls.Add(Me.txtBranchPhone)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.txtCmpAddress)
+        Me.Controls.Add(Me.txtBranchAddress)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.txtCmpName)
+        Me.Controls.Add(Me.txtBranchName)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.KeyPreview = True
         Me.MaximizeBox = False
@@ -235,11 +236,11 @@ Partial Class frmBranch
     Friend WithEvents Label7 As Label
     Friend WithEvents txtPHCRegNo As TextBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents txtCmpPhone As TextBox
+    Friend WithEvents txtBranchPhone As TextBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents txtCmpAddress As TextBox
+    Friend WithEvents txtBranchAddress As TextBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents txtCmpName As TextBox
+    Friend WithEvents txtBranchName As TextBox
     Friend WithEvents btnAdd As Button
     Friend WithEvents btnClose As Button
     Friend WithEvents chkInactive As CheckBox
